@@ -13,4 +13,12 @@ module.exports = [
       'no-console': 'error',
     },
   },
+  {
+    // Website scripts run in the browser, not Node
+    files: ['public/**/*.js'],
+    languageOptions: {
+      sourceType: 'script',
+      globals: globals.browser,
+    },
+  },
 ];

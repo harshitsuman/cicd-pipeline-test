@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in · Customer Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%234f46e5%27/%3E%3Ctext x=%2716%27 y=%2721%27 font-family=%27Arial%27 font-size=%2712%27 font-weight=%27700%27 fill=%27white%27 text-anchor=%27middle%27%3ECH%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="auth-page">
+  <main class="auth-layout">
+    <section class="auth-brand" aria-hidden="true">
+      <div class="brand">
+        <span class="brand-mark">CH</span>
+        <span class="brand-name">Customer Hub</span>
+      </div>
+      <div class="auth-brand-copy">
+        <h2>Every customer, one clear view.</h2>
+        <p>Search, filter and look up customer details in seconds.</p>
+      </div>
+      <p class="auth-brand-foot">Deployed with GitHub Actions + Render</p>
+    </section>
+
+    <section class="auth-panel">
+      <form id="login-form" class="auth-card" novalidate>
+        <div class="brand brand-compact">
+          <span class="brand-mark">CH</span>
+          <span class="brand-name">Customer Hub</span>
+        </div>
+
+        <h1>Sign in</h1>
+        <p class="muted">Welcome back. Enter your details to continue.</p>
+
+        <div id="login-error" class="alert" role="alert" hidden></div>
+
+        <label class="field">
+          <span>Username</span>
+          <input id="username" name="username" type="text" autocomplete="username" placeholder="admin" required autofocus>
+        </label>
+
+        <label class="field">
+          <span>Password</span>
+          <div class="password-wrap">
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" required>
+            <button type="button" id="toggle-password" class="link-btn" aria-label="Show password">Show</button>
+          </div>
+        </label>
+
+        <button type="submit" id="login-btn" class="btn btn-primary btn-block">Sign in</button>
+
+        <p class="hint">Demo login: <code>admin</code> / <code>password</code></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="/js/login.js"></script>
+</body>
+</html>

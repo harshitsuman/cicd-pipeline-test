@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customers · Customer Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%234f46e5%27/%3E%3Ctext x=%2716%27 y=%2721%27 font-family=%27Arial%27 font-size=%2712%27 font-weight=%27700%27 fill=%27white%27 text-anchor=%27middle%27%3ECH%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script>
+    // Send visitors who are not signed in back to the sign-in page
+    if (!sessionStorage.getItem('user')) location.replace('/');
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">CH</span>
+      <span class="brand-name">Customer Hub</span>
+    </div>
+    <div class="topbar-user">
+      <span class="avatar avatar-sm" id="user-avatar">A</span>
+      <span id="user-name" class="topbar-name">admin</span>
+      <button id="logout-btn" class="btn btn-ghost">Log out</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="page-head">
+      <div>
+        <h1>Customers</h1>
+        <p class="muted">Search by name or look up a customer by ID.</p>
+      </div>
+    </div>
+
+    <section class="stats" aria-label="Summary">
+      <div class="stat">
+        <span class="stat-label">Total customers</span>
+        <span class="stat-value" id="stat-total">–</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Active</span>
+        <span class="stat-value stat-good" id="stat-active">–</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Inactive</span>
+        <span class="stat-value stat-muted" id="stat-inactive">–</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Countries</span>
+        <span class="stat-value" id="stat-countries">–</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <form id="filter-form" class="filters" role="search">
+        <label class="field field-inline field-grow">
+          <span>Name</span>
+          <input id="filter-name" type="search" placeholder="Search by name…" autocomplete="off">
+        </label>
+        <label class="field field-inline">
+          <span>Customer ID</span>
+          <input id="filter-id" type="number" min="1" placeholder="e.g. 3" inputmode="numeric">
+        </label>
+        <div class="filter-actions">
+          <button type="submit" class="btn btn-primary">Search</button>
+          <button type="button" id="clear-btn" class="btn btn-secondary">Clear</button>
+        </div>
+      </form>
+
+      <div class="table-meta">
+        <span id="result-count" class="muted">Loading customers…</span>
+      </div>
+
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Customer</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Location</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody id="customer-rows"></tbody>
+        </table>
+      </div>
+
+      <div id="empty-state" class="empty" hidden>
+        <div class="empty-icon" aria-hidden="true">🔍</div>
+        <h3>No customers found</h3>
+        <p class="muted">Try a different name or ID, or clear the filters.</p>
+      </div>
+
+      <div id="error-state" class="alert" role="alert" hidden></div>
+    </section>
+  </main>
+
+  <script src="/js/customers.js"></script>
+</body>
+</html>
