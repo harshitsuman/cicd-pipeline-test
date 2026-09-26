@@ -16,6 +16,7 @@ router.get('/:id', (req, res) => {
   }
 
   const customer = customers.find((c) => c.id === id);
+  console.log("customers ",customer);
   if (!customer) {
     return res.status(404).json({ message: `Customer with id ${id} not found` });
   }

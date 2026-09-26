@@ -13,5 +13,6 @@ app.get('/', (req, res) => {
 app.use('/api/customers', customerRoutes);
 
 app.listen(PORT, () => {
+  // eslint-disable-next-line no-console -- startup message is intentional
   console.log(`Server running on http://localhost:${PORT}`);
 });
