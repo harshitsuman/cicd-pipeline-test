@@ -1,0 +1,12 @@
+[
+  { "id": 1, "name": "Aarav Sharma", "email": "aarav.sharma@example.com", "phone": "+91-9876543210", "city": "Delhi", "country": "India", "isActive": true },
+  { "id": 2, "name": "Emily Johnson", "email": "emily.johnson@example.com", "phone": "+1-202-555-0143", "city": "New York", "country": "USA", "isActive": true },
+  { "id": 3, "name": "Liam Smith", "email": "liam.smith@example.com", "phone": "+44-20-7946-0958", "city": "London", "country": "UK", "isActive": false },
+  { "id": 4, "name": "Priya Patel", "email": "priya.patel@example.com", "phone": "+91-9123456780", "city": "Mumbai", "country": "India", "isActive": true },
+  { "id": 5, "name": "Noah Williams", "email": "noah.williams@example.com", "phone": "+1-310-555-0199", "city": "Los Angeles", "country": "USA", "isActive": true },
+  { "id": 6, "name": "Sofia Garcia", "email": "sofia.garcia@example.com", "phone": "+34-91-123-4567", "city": "Madrid", "country": "Spain", "isActive": false },
+  { "id": 7, "name": "Kenji Tanaka", "email": "kenji.tanaka@example.com", "phone": "+81-3-1234-5678", "city": "Tokyo", "country": "Japan", "isActive": true },
+  { "id": 8, "name": "Olivia Brown", "email": "olivia.brown@example.com", "phone": "+61-2-9876-5432", "city": "Sydney", "country": "Australia", "isActive": true },
+  { "id": 9, "name": "Lukas Müller", "email": "lukas.mueller@example.com", "phone": "+49-30-123456", "city": "Berlin", "country": "Germany", "isActive": true },
+  { "id": 10, "name": "Ananya Iyer", "email": "ananya.iyer@example.com", "phone": "+91-9988776655", "city": "Bengaluru", "country": "India", "isActive": false }
+]
